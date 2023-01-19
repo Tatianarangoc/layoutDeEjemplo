@@ -1,72 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layout de ejemplo</title>
-  </head>
+    <link rel="stylesheet" href="./styles/main.css" />
+</head>
 
-  <body>
-    <header>
-      <img src="./images/logo.png" alt="logo" />
-      <h1>LayouDeEjemplo</h1>
+<body>
+    <header class="header">
+        <div class="header-div">
+            <img class="header-div_logo" src="./images/logo.png" alt="logo" />
+            <h1 class="header-div_title">LayoutDeEjemplo</h1>
+        </div>
 
-      <div class="nav-bg">
-        <nav class="navegacion contenedor">
-          <a href="#">Link1</a>
-          <a href="#">Link2</a>
-          <a href="#">Link3</a>
-          <a href="#">Link4</a>
+        <nav>
+            <ul class="header-nav">
+                <li>
+                    <a class="header-nav_link" href="#">Link1</a>
+                </li>
+                <li><a class="header-nav_link" href="#">Link2</a></li>
+                <li><a class="header-nav_link" href="#">Link3</a></li>
+                <li><a class="header-nav_link" href="#">Link4</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
-    <main>
-      <section>
-        <h2>Lorem ipsum, dolor sit amet</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          praesentium culpa, alias quisquam quaerat esse maiores repellat
-          deleniti eos ratione sequi nesciunt tenetur vel, expedita, autem
-          itaque amet unde. Sunt.
-        </p>
-      </section>
-      <section>
-        <h2>Lorem ipsum, dolor sit amet</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          praesentium culpa, alias quisquam quaerat esse maiores repellat
-          deleniti eos ratione sequi nesciunt tenetur vel, expedita, autem
-          itaque amet unde. Sunt.
-        </p>
-      </section>
-      <section>
-        <h2>Lorem ipsum, dolor sit amet</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-          praesentium culpa, alias quisquam quaerat esse maiores repellat
-          deleniti eos ratione sequi nesciunt tenetur vel, expedita, autem
-          itaque amet unde. Sunt.
-        </p>
-      </section>
+    <main class="main">
+        <section class="main-Section">
+            <h2 class="main-Section_subtitles">Lorem ipsum, dolor sit amet</h2>
+            <p class="main-Section_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                praesentium culpa, alias quisquam quaerat esse maiores repellat
+                deleniti eos ratione sequi nesciunt tenetur vel, expedita, autem
+                itaque amet unde. Sunt.
+            </p>
+        </section>
+        <section class="main-Section">
+            <hr class="main-Section_horizontalRule" />
+            <h2 class="main-Section_subtitles">Lorem ipsum, dolor sit amet</h2>
+            <div class="main-Section_div"><div class="vl"></div>
+            <p class="main-Section_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                praesentium culpa, alias quisquam quaerat esse maiores repellat
+                deleniti eos ratione sequi nesciunt tenetur vel, expedita, autem
+                itaque amet unde. Sunt.
+            </p></div>
+            
+        </section>
+        <section class="main-Section">
+            <hr class="main-Section_horizontalRule" />
+            <h2 class="main-Section_subtitles">Lorem ipsum, dolor sit amet</h2>
+            <p class="main-Section_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                praesentium culpa, alias quisquam quaerat esse maiores repellat
+                deleniti eos ratione sequi nesciunt tenetur vel, expedita, autem
+                itaque amet unde. Sunt.
+            </p>
+        </section>
+        <aside>
+            <section></section>
+            <section></section>
+        </aside>
     </main>
 
-    <footer>
-      <div class="nav-bg">
-        <nav class="navegacion contenedor">
-          <a href="#">Link1</a>
-          <a href="#">Link2</a>
-          <a href="#">Link3</a>
-          <a href="#">Link4</a>
-        </nav>
-      </div>
-      <div>
-        <nav>
-          <a href="#">FB</a>
-          <a href="#">TW</a>
-          <a href="#">G+</a>
-        </nav>
-      </div>
+    <footer class="footer">
+        <div class="footer-nav">
+            <nav>
+                <ul class="footer-nav"">
+                <li>
+                  <a class=" footer-nav_link" href="#">Link1</a>
+                    </li>
+                    <li><a class="footer-nav_link" href="#">Link2</a></li>
+                    <li><a class="footer-nav_link" href="#">Link3</a></li>
+                    <li><a class="footer-nav_link" href="#">Link4</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <ul class="footer-redes">
+                    <li> 
+                        <a class="footer-redes_link" href="#">FB<a>
+                    </li>
+                    <li> 
+                        <a class="footer-redes_link" href="#">TW<a>
+                    </li>
+                    <li>
+                        <a class="footer-redes_link" href="#">G+<a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
