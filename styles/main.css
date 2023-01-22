@@ -83,15 +83,11 @@
         margin: 2.5rem 1rem;
     }
 
-    .container {
-        margin: 2rem auto;
-        padding: 0.2rem;
+    .principal-nav {
+        margin: 2rem 4rem;
     }
 
-    .header-nav_link {
-        padding: 0.8rem;
-        margin: 0 2rem;
-    }
+
 }
 
 /*-----------------start css style for main sections----------*/
