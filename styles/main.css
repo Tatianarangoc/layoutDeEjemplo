@@ -6,6 +6,7 @@
     --oscuro: #212121;
     --hover: #fa8072;
     --line: #d3d3d3;
+
 }
 
 * {
@@ -15,6 +16,7 @@
     min-height: 100%;
     text-decoration: none;
     list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*------------------- start css styles for header------------ */
@@ -42,25 +44,27 @@
     font-weight: 300;
 }
 
-.container {
-    background-color: var(--nav);
+
+
+.principal-nav {
     margin: 0 auto;
+    width: 100%;
+    height: 45%;
 }
 
-.header-nav {
+.principal-nav_ul {
     display: flex;
     justify-content: space-evenly;
+    background-color: var(--nav);
 }
 
-.header-nav_link {
+.principal-nav_item {
+    margin: 1rem 1rem;
+}
+
+.principal-nav_link {
+    font-size: 1.125rem;
     color: var(--blanco);
-    font-size: 1rem;
-    padding: 0.5rem;
-}
-
-.header-nav_link:nth-child(3):hover {
-    font-size: 120%;
-    background-color: var(--hover);
 }
 
 /*mediaqueris for header */
@@ -91,125 +95,86 @@
 }
 
 /*-----------------start css style for main sections----------*/
-.main {
-    background-color: var(--background);
-    height: 70vh;
+.sections {
+    display: block;
 }
 
-.main-Section_text {
-    margin: 1.5rem 1rem;
-}
-
-.main-Section_textDiferent {
-    margin: 0 1rem;
-}
-
-.main-Section_horizontalRule {
-    border: 0.5px solid var(--oscuro);
-    width: 90%;
+.section {
     margin: 1rem 1rem;
 }
 
-.main-Section_div {
-    display: flex;
-    align-items: center;
+.section__title {
+    margin: 0.5rem 0;
+    font-size: 18px;
 }
 
-.vl {
+.section__text {
+    font-size: 16px;
+}
+
+.section__text__midle {
+    width: 90%;
+    font-size: 16px;
+    padding-left: 21px;
     border-left: 4px solid var(--line);
-    height: 100px;
-    margin-left: 2.5rem;
+    position: relative;
+    left: 31px;
 }
 
-@media (min-width: 1024px) {
 
-    .main-container {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        float: left;
-
-    }
-
-    .main-Section {
-        margin: auto 4rem;
-
-    }
-
-    .main-Section_text {
-        font-size: 18px;
-        margin-right: 230px;
-    }
-
-    .main-Section_textDiferent {
-        font-size: 18px;
-        margin-right: 245px;
-    }
-
-    .main-Section_horizontalRule {
-        margin: 1rem;
-        width: 70%;
-    }
-
-    .main-line {
-        position: absolute;
-        width: 50px;
-        height: 100%;
-        background-color: var(--line);
-    }
-
-    .aside-principalContainer {
-        float: right;
-        width: 25%;
-        background-color: green;
-        margin-top: 10px;
-    }
-
-    .aside_container1 {
-
-        margin: 2rem 1.1rem;
-        width: 85%;
-        height: 120px;
-        background-color: var(--principal-color);
-    }
-
-    .aside_container2 {
-
-        margin: 1rem 1.1rem;
-        width: 85%;
-        height: 120px;
-        background-color: var(--principal-color);
-    }
-
-
-
-
-
-
-
-}
 
 /*----------------finish css style for main sections----------*/
 
 /*-----------------start css style for main sections----------*/
 .footer {
-
+    margin: 0 0;
     background-color: var(--principal-color);
-
+    padding: 2%;
 }
 
-.footer-nav_link {
-    color: var(--blanco);
-    font-size: 1rem;
-    padding: 0.5rem;
-}
 
-.containerFooter {
+.second-nav_ul {
     display: flex;
-    margin: 2rem 0;
+    background-color: var(--nav);
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
     width: 80%;
     height: 45px;
-    font-size: 1rem;
-    background-color: var(--nav);
-    justify-content: space-around;
+}
+
+.second-nav_item {
+    display: flex;
+}
+
+.second-nav_link {
+    color: var(--blanco);
+    height: 30px;
+    font-size: 1.125rem;
+    margin: 1rem 0;
+}
+
+
+
+
+.third-nav_ul {
+    display: flex;
+    background-color: var(--nav-redes);
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    height: 45px;
+}
+
+.third-nav_item {
+    display: flex;
+}
+
+.third-nav_link {
+    color: var(--blanco);
+    height: 30px;
+    font-size: 1.125rem;
+    margin: 1rem 0;
+
 }
