@@ -6,28 +6,28 @@
     --oscuro: #212121;
     --hover: #fa8072;
     --line: #E6E6E6;
-
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .body {
     min-height: 100vh;
     width: 100vw;
-
+    text-decoration: none;
 
 }
 
-/*------------------- start css styles for header------------ */
+/*-------- start css styles for header------- */
 .header {
     width: 100%;
     background-color: var(--principal-color);
-
 }
 
 .header-container {
@@ -37,42 +37,37 @@
 
 }
 
-.logo {
+.header-container_logo {
     width: 50px;
     height: 50px;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-.header-title {
+.header-container_title {
     margin-left: 0.5rem;
     margin-top: 1.5rem;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
 
-.principal-nav {
+.header-principal_nav {
     width: 100%;
 }
 
-.principal-nav_ul {
+.header-principalNav_ul {
     display: flex;
     justify-content: space-around;
     background-color: var(--nav);
 }
 
-.principal-nav_item {
+.header-principalNav_item {
     padding: 10px;
-    list-style: none;
 }
 
 .principal-nav_link {
     font-size: 1.125rem;
     color: var(--blanco);
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .principal-nav_item:nth-child(3):hover a {
@@ -80,37 +75,38 @@
     padding: 0.5rem;
 }
 
-/*mediaqueris for header */
+/*mediaqueris for header desktop */
 @media (min-width: 1024px) {
     .hr {
-        width: 60%;
+        width: 90%;
+        margin: 0 0;
     }
 
     .header {
         display: flex;
     }
 
-    .logo {
+    .header-container_logo {
         margin: 2rem 0 2rem 3.5rem;
     }
 
-    .header-title {
+    .header-container_title {
         margin: 2rem 1rem;
     }
 
-    .principal-nav {
+    .header-principal_nav {
         margin: 2rem 4rem;
     }
 }
 
-/*-----------------start css style for main sections----------*/
+/*-----start css style for main sections-----*/
 .main-container {
     width: 100%;
     height: 70%;
     display: flex;
 }
 
-.section {
+.container-section {
     padding: 2% 8% 1% 6%;
     text-align: left;
     display: block;
@@ -120,7 +116,6 @@
 .section__title {
     font-size: 20px;
     margin-top: 2%;
-
 }
 
 .section__text {
@@ -140,32 +135,32 @@
     display: none;
 }
 
+/*-----mediaqueris sections tablet-----*/
 @media(min-width: 500px) {
-    .section {
+    .container-section {
         padding: 2% 1%;
         margin-left: 5%;
         width: 70%;
     }
 
-    .main-container {
+    .main {
         display: flex;
     }
 
-    .sections {
+    .container {
         margin: 0 1%;
         display: block;
     }
 
-    .section__title {
+    .container-section__title {
         font-size: 18px;
     }
 
-    .section__text {
+    .container-section__text {
         font-size: 16px;
-
     }
 
-    .section__text__midle {
+    .container-section__text__midle {
         width: 90%;
         font-size: 16px;
         padding-left: 3%;
@@ -175,13 +170,12 @@
         display: flex;
         flex-direction: column;
         min-width: 20%;
-        height: 85vh;
+        height: 85.9vh;
         background-color: green;
         justify-content: center;
         margin-right: 4%;
         align-items: center;
         justify-content: flex-start;
-
     }
 
     .aside_container {
@@ -192,22 +186,20 @@
     }
 }
 
+/*-----mediaqueris sections desktop-----*/
 @media(min-width: 1024px) {
-    .main-container {
+    .main {
         border-left: 64px var(--line);
     }
 
-    .sections {
+    .container {
         margin: 0 auto;
         border-left: 64px solid var(--line);
     }
-
-
 }
 
-/*----------------finish css style for main sections----------*/
 
-/*-----------------start css style for main sections----------*/
+/*-----start css style for footer------*/
 .footer {
     margin: 0 0;
     background-color: var(--principal-color);
@@ -215,7 +207,7 @@
     height: 20%;
 }
 
-.second-nav_ul {
+.footer-secondNav_ul {
     display: flex;
     background-color: var(--nav);
     margin: 0 auto;
@@ -223,23 +215,21 @@
     align-items: center;
     width: 80%;
     height: 45px;
-    list-style: none;
 }
 
-.second-nav_link {
+.footer-secondNav_link {
     color: var(--blanco);
     height: 30px;
     font-size: 1.125rem;
     margin: 1rem 0;
-    text-decoration: none;
 }
 
-.second-nav_link:hover {
+.footer-secondNav_link:hover {
     background-color: var(--hover);
     padding: 0.5rem;
 }
 
-.third-nav_ul {
+.footer-thirdNav_ul {
     display: flex;
     background-color: var(--nav-redes);
     margin: 0 auto;
@@ -249,51 +239,39 @@
     height: 45px;
 }
 
-.third-nav_item {
+.footer-thirdNav_item {
     display: flex;
 }
 
-.third-nav_link {
+.footer-thirdNav_link {
     color: var(--blanco);
     height: 30px;
     font-size: 1.125rem;
     margin: 1rem 0;
 }
 
-
+/*-----mediaqueris footer desktop-----*/
 
 @media(min-width: 1024px) {
     .footer {
         display: flex;
         justify-content: space-around;
-
     }
 
-    .second-nav_ul {
+    .footer-secondNav_ul {
         width: 100%;
-
     }
 
-    .second-nav_link {
+    .footer-secondNav_link {
         margin: 1rem 1rem;
     }
 
-    .third-nav_ul {
+    .footer-thirdNav_ul {
         margin: 0 1rem;
         width: 75%;
-
-
     }
 
-
-
-    .third-nav_link {
+    .footer-thirdNav_link {
         margin: 1rem 1rem;
-
-
     }
-
-
-
-
 }
