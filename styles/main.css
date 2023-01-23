@@ -13,25 +13,25 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    min-height: 100%;
-    text-decoration: none;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*------------------- start css styles for header------------ */
 .header {
+    width: 100%;
     background-color: var(--principal-color);
+
 }
 
 .header-container {
     display: flex;
     justify-content: center;
     align-items: stretch;
+
 }
 
 .logo {
-    width: 3rem;
+    width: 50px;
+    height: 50px;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -44,35 +44,37 @@
     font-weight: 300;
 }
 
-
-
 .principal-nav {
-    margin: 0 auto;
     width: 100%;
-    height: 45%;
 }
 
 .principal-nav_ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: var(--nav);
 }
 
 .principal-nav_item {
-    margin: 1rem 1rem;
+    padding: 10px;
+    list-style: none;
 }
 
 .principal-nav_link {
     font-size: 1.125rem;
     color: var(--blanco);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 /*mediaqueris for header */
 @media (min-width: 1024px) {
+    .hr {
+        width: 60%;
+    }
+
     .header {
         display: flex;
-
-        align-items: flex-end;
     }
 
     .logo {
@@ -80,44 +82,126 @@
     }
 
     .header-title {
-        margin: 2.5rem 1rem;
+        margin: 2rem 1rem;
     }
 
     .principal-nav {
         margin: 2rem 4rem;
     }
-
-
 }
 
 /*-----------------start css style for main sections----------*/
-.sections {
-    display: block;
+.main-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
 }
 
 .section {
-    margin: 1rem 1rem;
+    padding: 3% 8% 4% 6%;
+    text-align: left;
+    display: block;
+    flex-direction: column;
 }
 
 .section__title {
-    margin: 0.5rem 0;
-    font-size: 18px;
+    font-size: 20px;
+    margin-top: 2%;
+
 }
 
 .section__text {
-    font-size: 16px;
+    font-size: 18px;
+    margin: 2% 0 0 0;
 }
 
 .section__text__midle {
-    width: 90%;
-    font-size: 16px;
-    padding-left: 21px;
+    width: 95%;
+    font-size: 18px;
+    padding-left: 7%;
     border-left: 4px solid var(--line);
-    position: relative;
-    left: 31px;
+    margin: 2% 0 0 0;
 }
 
+.aside {
+    display: none;
+}
 
+@media(min-width: 500px) {
+
+
+    .main-container {
+        display: flex;
+    }
+
+    .sections {
+        margin: 0 1%;
+        display: block;
+    }
+
+    .section__title {
+        font-size: 18px;
+    }
+
+    .section__text {
+        font-size: 16px;
+        padding-right: 3%;
+    }
+
+    .section__text__midle {
+        width: 95%;
+        font-size: 16px;
+        padding-left: 3%;
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100VH;
+        background-color: green;
+        justify-content: center;
+        margin: auto 3%;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .aside_container {
+        width: 170px;
+        height: 120px;
+        margin: 10% 2% 0 2%;
+        background-color: var(--principal-color);
+    }
+}
+
+@media(min-width: 1024px) {
+    .main-container {
+        border-left: 64px var(--line);
+    }
+
+    .sections {
+        margin: 0 auto;
+        border-left: 64px solid var(--line);
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100vh;
+        padding: 2%;
+        background-color: green;
+        justify-content: center;
+        margin: auto 5%;
+    }
+
+    .aside_container {
+        width: 165px;
+        height: 120px;
+        margin: 5% 2% 0 2%;
+        background-color: var(--principal-color);
+    }
+}
 
 /*----------------finish css style for main sections----------*/
 
@@ -125,9 +209,9 @@
 .footer {
     margin: 0 0;
     background-color: var(--principal-color);
-    padding: 2%;
+    padding: 1rem;
+    height: 20%;
 }
-
 
 .second-nav_ul {
     display: flex;
@@ -137,10 +221,7 @@
     align-items: center;
     width: 80%;
     height: 45px;
-}
-
-.second-nav_item {
-    display: flex;
+    list-style: none;
 }
 
 .second-nav_link {
@@ -148,10 +229,8 @@
     height: 30px;
     font-size: 1.125rem;
     margin: 1rem 0;
+    text-decoration: none;
 }
-
-
-
 
 .third-nav_ul {
     display: flex;
@@ -172,5 +251,40 @@
     height: 30px;
     font-size: 1.125rem;
     margin: 1rem 0;
+
+}
+
+@media(min-width: 1024px) {
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .second-nav_ul {
+        width: 100%;
+
+    }
+
+    .second-nav_link {
+        margin: 1rem 1rem;
+    }
+
+    .third-nav_ul {
+        margin: 0 1rem;
+        width: 75%;
+
+
+    }
+
+
+
+    .third-nav_link {
+        margin: 1rem 1rem;
+
+
+    }
+
+
+
 
 }
