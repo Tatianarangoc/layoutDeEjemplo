@@ -21,7 +21,7 @@
     min-height: 100vh;
     width: 100vw;
     text-decoration: none;
-
+    display: block;
 }
 
 /*-------- start css styles for header------- */
@@ -102,30 +102,33 @@
 /*-----start css style for main sections-----*/
 .main-container {
     width: 100%;
-    height: 70%;
     display: flex;
 }
 
 .container-section {
-    padding: 2% 8% 1% 6%;
+    padding: 1.1% 7% 2% 6%;
     text-align: left;
     display: block;
     flex-direction: column;
 }
 
-.section__title {
-    font-size: 20px;
+.container-section__title {
+    font-size: 16px;
     margin-top: 2%;
+    line-height: 1rem;
+
 }
 
-.section__text {
-    font-size: 18px;
+.container-section__text {
+    font-size: 14px;
     margin: 2% 0 0 0;
+
 }
 
-.section__text__midle {
+.container-section__text__midle {
     width: 95%;
-    font-size: 18px;
+    font-size: 14px;
+
     padding-left: 7%;
     border-left: 4px solid var(--line);
     margin: 2% 0 0 0;
@@ -136,16 +139,20 @@
 }
 
 /*-----mediaqueris sections tablet-----*/
-@media(min-width: 500px) {
+@media(min-width: 768px) {
+
     .container-section {
-        padding: 2% 1%;
-        margin-left: 5%;
-        width: 70%;
+        width: 70vw;
+        padding: 2% 5% 2% 3%;
     }
 
     .main {
         display: flex;
+        height: 60vh;
+        width: 65vw;
+
     }
+
 
     .container {
         margin: 0 1%;
@@ -153,29 +160,30 @@
     }
 
     .container-section__title {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .container-section__text {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .container-section__text__midle {
         width: 90%;
-        font-size: 16px;
+        font-size: 14px;
         padding-left: 3%;
+        border-left: 4px solid var(--line);
     }
 
     .aside {
         display: flex;
         flex-direction: column;
-        min-width: 20%;
-        height: 85.9vh;
+        min-width: 30%;
+        height: 60vh;
         background-color: green;
         justify-content: center;
-        margin-right: 4%;
         align-items: center;
         justify-content: flex-start;
+        margin-left: 0;
     }
 
     .aside_container {
@@ -190,13 +198,37 @@
 @media(min-width: 1024px) {
     .main {
         border-left: 64px var(--line);
+        height: 78.2vh;
+
     }
 
     .container {
-        margin: 0 auto;
+        margin: 0 0;
         border-left: 64px solid var(--line);
     }
+
+    .container-section__title {
+        font-size: 20px;
+    }
+
+    .container-section__text {
+        width: 58vw;
+        font-size: 18px;
+    }
+
+    .container-section__text__midle {
+        width: 56vw;
+        font-size: 18px;
+    }
+
+    .aside {
+        margin-right: 2%;
+        height: 78.2vh;
+    }
 }
+
+
+
 
 
 /*-----start css style for footer------*/
@@ -204,7 +236,7 @@
     margin: 0 0;
     background-color: var(--principal-color);
     padding: 1rem;
-    height: 20%;
+
 }
 
 .footer-secondNav_ul {
